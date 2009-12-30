@@ -3,6 +3,7 @@ development:
   secret_access_key: SECRET_ACCESS_KEY
   acl: public-read
   bucket_name: YOUR_BUCKET
+  key: YOUR_KEY
   max_file_size: 1073741824
     
 test:
@@ -10,6 +11,7 @@ test:
   secret_access_key: SECRET_ACCESS_KEY
   acl: public-read
   bucket_name: YOUR_BUCKET
+  key: YOUR_KEY
   max_file_size: 1073741824
   
 production:
@@ -17,4 +19,5 @@ production:
   secret_access_key: SECRET_ACCESS_KEY
   acl: public-read
   bucket_name: YOUR_BUCKET
+  key: YOUR_KEY
   max_file_size: 1073741824
