@@ -20,6 +20,8 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
   config.gem 'mime-types',                  :lib => "mime/types",     :version => '1.16'
+  #config.gem 'right_aws', :version => '>=1.10.0', :source => 'http://gemcutter.org'
+  config.gem 'uuidtools', :version => '>= 2.1.1'
   
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
