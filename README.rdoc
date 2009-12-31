@@ -1,12 +1,13 @@
 = Uploadify/Paperclip
 
-This is a simple Rails (2.3.4) app that shows using Uploadify http://www.uploadify.com to upload multiple image files, using Paperclip to store them.
+This is a simple Rails (2.3.5) app that shows using Uploadify http://www.uploadify.com to upload multiple image files, using Paperclip and delayed_job to store them on Amazon S3 asynchronously.
 
-I originally built this while testing it myself, and am putting it up since I didn't ever find a clear and complete example that worked in 2.3.4.
+I originally built this while testing it myself, and am putting it up since I didn't ever find a clear and complete example that worked in 2.3.5.
 
 == Setup
 
-It's a standard Rails app, nothing special.   The code does depend on the mime-types gem, so you will need to install that.
+It's a standard Rails app, nothing special. Dependencies are included in vendor.
+After cloning this, just run rake db:migrate, then kick off delayed_job with rake jobs:work.
 
 == Thanks To:
 
@@ -14,3 +15,4 @@ Thanks to several people, from whom I pulled bits of this from:
 * John Nunemaker http://railstips.org/2009/7/21/uploadify-and-rails23
 * Casper Fabricius http://casperfabricius.com/site/2009/03/26/uploading-multiple-files-with-progress-indicator-using-jquery-flash-and-rails/
 * Timmy Crawford http://timmyc.posterous.com/uploadify-on-rails-with-paperclip
+* Jared Pace http://codewordstudios.com/posts/3-delayed-upload-delivery-to-s3-with-paperclip-delayed-job
