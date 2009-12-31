@@ -42,7 +42,7 @@ class PhotosController < ApplicationController
   # POST /photos
   # POST /photos.xml
   def create
-    @photo = Photo.new(params[:photo])
+    @photo = TempPhoto.new(params[:photo])
     @photo.photo_content_type = MIME::Types.type_for(@photo.photo_file_name).to_s
     respond_to do |format|
       if @photo.save
