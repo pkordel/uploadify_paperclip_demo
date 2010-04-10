@@ -1,4 +1,9 @@
 class PhotosController < ApplicationController
+  
+  # Comment this out for CSRF protection. 
+  # There's a metal middleware class in app/middleware that's supposed to allow CSRF with Rails,
+  # but it doesn't seem to work reliably.
+  skip_before_filter :verify_authenticity_token
 
   # GET /photos
   # GET /photos.xml
