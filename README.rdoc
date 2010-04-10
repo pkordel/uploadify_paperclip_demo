@@ -9,6 +9,8 @@ I originally built this while testing it myself, and am putting it up since I di
 It's a standard Rails app, nothing special. Dependencies are included in vendor.
 After cloning this, just run rake db:migrate, then kick off delayed_job with rake jobs:work.
 
+Please remember to add your S3 credentials after you copy config/amazon_s3.yml.example to config/amazon_s3.yml.
+
 == Thanks To:
 
 Thanks to several people, from whom I pulled bits of this from:
