@@ -7,3 +7,4 @@ public/system/*
 db/development.sqlite3
 config/amazon_s3.yml
 tmp/*
+public/uploads/

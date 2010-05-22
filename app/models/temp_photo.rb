@@ -2,7 +2,7 @@ class TempPhoto < Photo
   has_attached_file :photo,
                     :styles => { :mini => '48x48#', :small => '178x92>', :product => '393x203>' }, 
                     :default_style => :product,
-                    :path => ":rails_root/tmp/uploads/:id/:style/:basename.:extension" # Save it to a temporay location
+                    :path => ":rails_root/public/uploads/#{S3_CONFIG['key']}/:id/:style/:basename.:extension" # Save it to a temporay location
                     
   # Save this as a regular upload on s3
   # this is run after the file is saved
