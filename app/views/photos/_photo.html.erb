@@ -1,6 +1,8 @@
 
   <div class="photo">
-    <%= image_url(photo, :small) %>
+    <!-- experimental, for showing tmp images while uploading, see README and photos_helper.rb -->
+    <%# image_url(photo, :small) %>
+    <%= link_to(image_tag(photo.photo.url(:small)), photo.photo.url(:original)) %>
     <br>
     <%=h photo.photo_file_name %> | <%= link_to 'Destroy', photo, :confirm => 'Are you sure?', :method => :delete %>
   </div>

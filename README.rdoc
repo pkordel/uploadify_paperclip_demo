@@ -1,5 +1,11 @@
 = Uploadify/Paperclip
 
+This is my take on the uploadify demo. I've recently added support for multiple styles as well as for showing the tmp images until the upload to S3 is complete. Note that you will end up with broken links unless you can find a way to refresh the image links periodically, as the tmp images are deleted after being uploaded to s3. See app/views/_photo.html.erb and app/helpers/photos_helper.rb. It's commented out in the partial, feel free to try it out.
+
+If you plan to use this on a read-only file system like heroku, you'll need to a) save your tmp images under /tmp and b) figure out another way to show the tmp images. The tmp path is set in config/initializers/paperclip.rb.
+
+One way is to just show a placeholder image, another is to use ajaxy goodness to loop over the links until they match a pattern that indicates that the link in question now points to s3. I'll leave that exercise to all you forkers ;)
+
 This is a simple Rails (2.3.5) app that shows using Uploadify http://www.uploadify.com to upload multiple image files, using Paperclip and delayed_job to store them on Amazon S3 asynchronously.
 
 I originally built this while testing it myself, and am putting it up since I didn't ever find a clear and complete example that worked in 2.3.5.
